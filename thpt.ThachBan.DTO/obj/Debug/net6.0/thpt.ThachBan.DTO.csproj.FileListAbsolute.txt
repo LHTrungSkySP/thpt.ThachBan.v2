@@ -1,0 +1,12 @@
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.deps.json
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.AssemblyReference.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfoInputs.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfo.cs
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\refint\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\ref\thpt.ThachBan.DTO.dll

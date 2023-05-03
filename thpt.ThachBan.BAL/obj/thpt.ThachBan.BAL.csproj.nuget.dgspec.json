@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj": {}
+    "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj": {
+    "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj",
+        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj",
         "projectName": "thpt.ThachBan.BAL",
-        "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj",
+        "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\thpt.ThachBan.BAL.csproj",
         "packagesPath": "C:\\Users\\Le Trung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\obj\\",
+        "outputPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.BAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Le Trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj": {
-                "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj"
+              "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj": {
+                "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj"
               },
-              "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
-                "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj"
+              "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
+                "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj": {
+    "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj",
         "projectName": "thpt.ThachBan.DAL",
-        "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj",
+        "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj",
         "packagesPath": "C:\\Users\\Le Trung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Le Trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
-                "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj"
+              "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
+                "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj"
               }
             }
           }
@@ -125,14 +125,14 @@
         }
       }
     },
-    "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
+    "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
         "projectName": "thpt.ThachBan.DTO",
-        "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
+        "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
         "packagesPath": "C:\\Users\\Le Trung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\obj\\",
+        "outputPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Le Trung\\AppData\\Roaming\\NuGet\\NuGet.Config",

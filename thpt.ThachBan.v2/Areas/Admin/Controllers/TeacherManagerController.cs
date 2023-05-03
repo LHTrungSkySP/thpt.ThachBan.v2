@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using System.Globalization;
 using thpt.ThachBan.BAL.ClassBAL;
 using thpt.ThachBan.BAL.DepartmentBAL;
 using thpt.ThachBan.BAL.DepartmentManagerBAL;
@@ -11,7 +12,9 @@ using thpt.ThachBan.DAL;
 using thpt.ThachBan.DTO.Models;
 using thpt.ThachBan.DTO.ViewModels.Areas.Admin;
 using thpt.ThachBan.DTO.ViewModels.Areas.Common;
+using thpt.ThachBan.DTO.ViewModels.Areas.Student;
 using thpt.ThachBan.UI.Areas.Admin.Models;
+using thpt.ThachBan.v2.Models.UnititiesModel;
 
 namespace thpt.ThachBan.v2.Areas.Admin.Controllers
 {
@@ -153,7 +156,7 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
                 employee.Status = data.Status;
                 employee.Address = data.Address;
                 employee.PhoneNumber = data.PhoneNumber;
-                employee.Gender = int.Parse(data.Gender);
+                employee.Gender = data.Gender;
                 employee.PlaceOfBirth = data.PlaceOfBirth;
                 employee.Nation = data.Nation;
                 try
@@ -242,8 +245,77 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             TempData["Departments"] = DatabaseContext.GetDB.Department.OrderBy(x => x.DepartmentName).ToList();
 
             TempData["Subjects"] = DatabaseContext.GetDB.Subject.OrderBy(x => x.SubjectName).ToList();
+            ViewBag.EmployeeCode = GetTeacherCode();
+            ViewBag.StartedDate= DateTime.Now;
+            ViewBag.EndedDate = DateTime.Now.AddYears(3);
+            return View("Create");
+        }
 
-            return View();
+        [HttpPost]
+        public IActionResult CreatePost([FromBody] TeacherPost teacherPost )
+        {
+            Employee employee = new Employee();
+            employee.EmployeeId = Guid.NewGuid();
+            employee.EmployeeCode=teacherPost.EmployeeCode;
+            employee.EmployeeName= teacherPost.EmployeeName;
+            employee.Gender = teacherPost.Gender;
+            employee.PlaceOfBirth=teacherPost.PlaceOfBirth;
+            employee.Nation=teacherPost.Nation;
+            employee.PhoneNumber=teacherPost.PhoneNumber;
+            employee.Address=teacherPost.Address;
+            employee.Email=teacherPost.Email;
+            employee.Status = 1;
+            try
+            {
+                DateTime date = DateTime.ParseExact(
+                $"{teacherPost.DateOfBirthMonth}/{teacherPost.DateOfBirthDate}/{teacherPost.DateOfBirthYear}",
+                "MM/dd/yyyy",
+                    CultureInfo.InvariantCulture);
+                employee.DateOfBirth = date;
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    status = 501,
+                    message = "Ngày sinh không hợp lệ",
+                });
+            }
+            try
+            {
+                DateTime date = DateTime.ParseExact(
+                $"{teacherPost.WorkStartedMonth}/{teacherPost.WorkStartedDate}/{teacherPost.WorkStartedYear}",
+                "MM/dd/yyyy",
+                    CultureInfo.InvariantCulture);
+                employee.WorkStarted = date;
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    status = 501,
+                    message = "Ngày Làm việc không hợp lệ",
+                });
+            }
+            try
+            {
+                DateTime date = DateTime.ParseExact(
+                $"{teacherPost.WorkEndedMonth}/{teacherPost.WorkEndedDate}/{teacherPost.WorkEndedYear}",
+                "MM/dd/yyyy",
+                    CultureInfo.InvariantCulture);
+                employee.WorkEnded = date;
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    status = 501,
+                    message = "Ngày kết thúc không hợp lệ",
+                });
+            }
+            employee.CreatedBy = SessionManager.GetId(HttpContext);
+            employee.CreatedDate = DateTime.Now;
+            return View(employee);
         }
 
         public string GetTeacherCode()

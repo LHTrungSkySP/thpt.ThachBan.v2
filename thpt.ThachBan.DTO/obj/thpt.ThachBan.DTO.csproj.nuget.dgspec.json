@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {}
+    "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
+    "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
         "projectName": "thpt.ThachBan.DTO",
-        "projectPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
+        "projectPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\thpt.ThachBan.DTO.csproj",
         "packagesPath": "C:\\Users\\Le Trung\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\obj\\",
+        "outputPath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Le Trung\\AppData\\Roaming\\NuGet\\NuGet.Config",

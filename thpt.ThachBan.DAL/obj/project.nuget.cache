@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CknNnfoMPWAWrNGe4MnosUxCVfIhekFZxtVGEsJo7AIUZMcHDx5T8695+l0ByeZMP+oH9c5gZ+3HC608alvNNg==",
+  "dgSpecHash": "yrVS2wCvan7JeiOgltOSHXabnnElWaVUP/rJOrPTY3wAcR+YmsiQJeizG1TjoqfoUaQWJ0TC/siHIHiR6g4/jA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.DAL\\thpt.ThachBan.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Le Trung\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Le Trung\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -3,6 +3,7 @@
 @{
     dynamic data = JsonConvert.DeserializeObject(HttpContextAccessor.HttpContext.Session.GetString("UserInfor"));
     var tam = ViewContext.RouteData.Values["area"]?.ToString();
+    int roleGroup = data.Role.RoleGroup;
 }
 <html lang="en">
 <head>
@@ -39,6 +40,11 @@
                         </a>
                         <ul class="dropdown-menu position-absolute">
                             <li>@Html.ActionLink("About", "Index", "About"+tam, null, new { @class = "dropdown-item text-black" })</li>
+                            @if (roleGroup == 0)
+                            {
+                                <li><a class="dropdown-item text-black" asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index">Change Admin</a></li>
+                            }
+                            
                             <li>@Html.ActionLink("Logout", "Logout","BaseArea", null, new { @class = "dropdown-item text-black" })</li>
                         </ul>
                     </li>
@@ -60,46 +66,17 @@
                 <!-- Page Wrapper -->
                 <div style="margin-top: -3px;" id="wrapper">
                     @{
-                        int roleGroup = data.Role.RoleGroup;
-                        if (roleGroup == 0)
-                        {
-                            @Html.Partial("PartialView/SidebarAdmin")
-                        }
-                        else if (roleGroup == 1)
-                        {
-                            @Html.Partial("PartialView/SidebarTeacher")
-                        }
-                        else
+                        if (roleGroup == 2)
                         {
                             @Html.Partial("PartialView/SidebarStudent")
+                        }
+                        else if (roleGroup <=1)
+                        {
+                            @Html.Partial("PartialView/SidebarTeacher")
                         }
                     }
                 </div>
                 <!-- End of Page Wrapper -->
-                <!-- Scroll to Top Button-->
-                <a class="scroll-to-top rounded" href="#page-top">
-                    <i class="fas fa-angle-up"></i>
-                </a>
-
-                <!-- Logout Modal-->
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="login.html">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             @RenderBody()
         </main>

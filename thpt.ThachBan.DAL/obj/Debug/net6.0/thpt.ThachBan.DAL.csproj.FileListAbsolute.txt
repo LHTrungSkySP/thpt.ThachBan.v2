@@ -13,3 +13,18 @@ C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\th
 C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\refint\thpt.ThachBan.DAL.dll
 C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.pdb
 C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\ref\thpt.ThachBan.DAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\bin\Debug\net6.0\thpt.ThachBan.DAL.deps.json
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\bin\Debug\net6.0\thpt.ThachBan.DAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\bin\Debug\net6.0\thpt.ThachBan.DAL.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.csproj.AssemblyReference.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.AssemblyInfoInputs.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.AssemblyInfo.cs
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.csproj.CopyComplete
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\refint\thpt.ThachBan.DAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\thpt.ThachBan.DAL.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DAL\obj\Debug\net6.0\ref\thpt.ThachBan.DAL.dll

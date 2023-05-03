@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YLEziigJMYq+SBWu8DarbPdAgMPcJByJMg6QDsmaZuT1kXAp9CFyfx24vNTn80028zBn+3WI0MrIxVlmlD89dg==",
+  "dgSpecHash": "XSqHHHKoTCXGzgQKgPZyVzhdrJlaA7yIboEp/Y/+XfFzCfxJGw9iijfzd/kkuMoSp1/xJEszbwBTsmSe2N1kng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Le Trung\\Desktop\\thpt.ThachBan.v2\\thpt.ThachBan.v2\\thpt.ThachBan.v2.csproj",
+  "projectFilePath": "C:\\Users\\Le Trung\\Desktop\\New folder (2)\\thpt.ThachBan.v2\\thpt.ThachBan.v2\\thpt.ThachBan.v2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Le Trung\\.nuget\\packages\\bootstrap\\5.0.2\\bootstrap.5.0.2.nupkg.sha512",
     "C:\\Users\\Le Trung\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

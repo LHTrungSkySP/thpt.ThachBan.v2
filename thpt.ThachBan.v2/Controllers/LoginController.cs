@@ -35,10 +35,8 @@ namespace thpt.ThachBan.v2.Controllers
         }
 
         [HttpPost]
-        public IActionResult LoginPost()
+        public IActionResult LoginPost(string username, string password)
         {
-            string? username = Request.Form["username"];
-            string? password = Request.Form["password"];
             Account acc = accountBAL.CheckLoginInfor(username, password);            
             if (acc == null)
             {

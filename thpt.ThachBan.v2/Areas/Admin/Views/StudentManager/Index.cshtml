@@ -150,28 +150,16 @@
         </div>
     </div>
     <div class="d-inline-flex w-100 justify-content-center">
-        @{
-
-            for (int i = 1; i <= ViewBag.pageSize; i++)
-            {
-                if (i == ViewBag.pageCurrent)
-                {
-                    <a href="@Url.Action("Index", new {pageCurrent = i})" class="d-inline-block btn btn-danger">@i</a>
-                }
-                else
-                {
-                    <a href="@Url.Action("Index",new {pageCurrent = i})" class="d-inline-block btn btn-dark">@i</a>
-
-                }
-
-            }
-        }
-
+        <input min="1" max="@ViewBag.pageSize" type="number" id="changePaging" class="form-control" style="width: 80px;" value="@ViewBag.pageCurrent"><span style="font-size: 27px;">/@ViewBag.pageSize</span>
     </div>
 </div>
 
 <script>
     $(document).ready(function () {
+        $('#changePaging').focus();
+        $("#changePaging").on("change",function(){
+            window.location.href = "/Admin/StudentManager?pageCurrent=" + $("#changePaging").val();
+        });
         var btn_posts = $('.btn_post');
         for(let i=0;i<btn_posts.length;i++){
             $('#btn_post_'+i).on("click",function(){

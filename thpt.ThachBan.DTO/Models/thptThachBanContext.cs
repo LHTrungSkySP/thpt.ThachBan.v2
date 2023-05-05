@@ -284,7 +284,6 @@ namespace thpt.ThachBan.DTO.Models
                     .IsRequired()
                     .HasMaxLength(50);
             });
-
             modelBuilder.Entity<Schedule>(entity =>
             {
                 entity.HasKey(e => new { e.ClassId, e.ClassTime, e.Day });
@@ -304,6 +303,7 @@ namespace thpt.ThachBan.DTO.Models
                     .WithMany(p => p.Schedule)
                     .HasForeignKey(d => d.SubjectId)
                     .HasConstraintName("FK_Schedule_Subject");
+
             });
 
             modelBuilder.Entity<School>(entity =>

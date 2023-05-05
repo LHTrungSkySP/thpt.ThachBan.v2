@@ -1,5 +1,5 @@
 ﻿@model List<thpt.ThachBan.DTO.Models.Subject>
-@using Microsoft.AspNetCore.Mvc.Rendering
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -8,23 +8,31 @@
 
     <!-- Main Content -->
     <div id="content">
-        <div class="container-fluid">
-            <hr />
-            <h4 class="mb-4">Thông tin môn học</h4>
-            <hr />
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="p-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <h1>Danh sách môn học</h1>
+                <a class="btn btn-outline-success h-100" asp-area="Admin" asp-controller="SubjectManager" asp-action="Create">Tạo mới</a>
+            </div>
             <form id="formListSubject" action="" method="get">
 
                 <div class="input-group mb-3">
 
-                    <input name="SubjectNameSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Tên" value="@ViewBag.SubjectNameSearch">
+                    <input name="SubjectNameSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Môn" value="@ViewBag.SubjectNameSearch">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
                     <span>&nbsp;&nbsp;&nbsp;</span>
 
-                    <input name="MaxLessonADaySearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Số lượng chỗ ngồi" value="@ViewBag.MaxLessonADaySearch">
+                    <input name="MaxLessonADaySearch" type="number" class="form-control flex-grow-0 w-auto searchInput" placeholder="Số tiết tối đa / ngày" value="@ViewBag.MaxLessonADaySearch">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
                     <span>&nbsp;&nbsp;&nbsp;</span>
 
-                    <input name="LessonAWeek" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Khối" value="@ViewBag.LessonAWeek">
+                    <input name="LessonAWeek" type="number" class="form-control flex-grow-0 w-auto searchInput" placeholder="Số tiết / tuần" value="@ViewBag.LessonAWeek">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
                     <span>&nbsp;&nbsp;&nbsp;</span>
 

@@ -34,11 +34,11 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             int OrderBy = 0,
             int pageCurrent = 1,
             int size = 10,
-            string CodeSearch = null,
-            string NameSearch = null,
-            string ClassSearch = null,
-            string StudentTaskSearch = null,
-            string SocialPolicySearch = null,
+            string? CodeSearch = null,
+            string? NameSearch = null,
+            string? ClassSearch = null,
+            string? StudentTaskSearch = null,
+            string? SocialPolicySearch = null,
             int Status = 1,
             Guid? id = null
             )
@@ -58,7 +58,10 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
                 student.Status = 0;
                 student.UpdatedBy = SessionManager.GetId(HttpContext);
                 student.UpdatedDate = DateTime.Now;
+                Class _class = DatabaseContext.GetDB.Class.Find(student.ClassId);
+                _class.NumOfMem= _class.NumOfMem-1;
                 DatabaseContext.GetDB.Update(student);
+                DatabaseContext.GetDB.Update(_class);
                 DatabaseContext.GetDB.SaveChanges();
             }
             List<Student> students = DatabaseContext.GetDB.Student.Where(x => x.Status == Status).ToList();
@@ -288,6 +291,10 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
                 });
             }
             DatabaseContext.GetDB.Student.Add(student);
+            Class _class = DatabaseContext.GetDB.Class.Find(student.ClassId);
+            _class.NumOfMem = _class.NumOfMem + 1;
+            DatabaseContext.GetDB.Class.Update(_class);
+
             DatabaseContext.GetDB.SaveChanges();
             CreateAccount(student.StudentCode, 2);
             try
@@ -318,7 +325,7 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             return Json(new
             {
                 status = 200,
-                message = "Cập nhật thành công!",
+                message = "Tạo thành công!",
             });
         }
         public string GetStudentCode()

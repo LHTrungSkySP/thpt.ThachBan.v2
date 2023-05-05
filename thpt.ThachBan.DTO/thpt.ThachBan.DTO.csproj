@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="SubModels\" />
     <Folder Include="ViewModels\Areas\Teacher\" />
   </ItemGroup>
 

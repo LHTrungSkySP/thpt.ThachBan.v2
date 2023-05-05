@@ -1,7 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Drawing.Printing;
 using thpt.ThachBan.DAL;
 using thpt.ThachBan.DTO.Models;
+using thpt.ThachBan.DTO.SubModels;
 using thpt.ThachBan.DTO.ViewModels.Areas.Admin;
+using thpt.ThachBan.UI.Areas.Admin.Models;
+using thpt.ThachBan.v2.Models.UnititiesModel;
 
 namespace thpt.ThachBan.v2.Areas.Admin.Controllers
 {
@@ -64,7 +68,74 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
                 aboutClass.EmployeeName = DatabaseContext.GetDB.Employee.Find(classes[i].EmployeeId)?.EmployeeName;
                 aboutClasses.Add( aboutClass );
             }
+            ViewBag.pageSize = (int)Math.Ceiling((double)aboutClasses.Count / size);
+            aboutClasses = aboutClasses.Skip((pageCurrent - 1) * size).Take(size).ToList();
+            ViewBag.pageCurrent = pageCurrent;
             return View(aboutClasses);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(Guid id)
+        {
+            ViewBag.Employees = DatabaseContext.GetDB.Employee.OrderBy(x=>x.EmployeeCode).ToList();
+            Class Class = DatabaseContext.GetDB.Class.Find(id);
+
+            if (Class != null)
+            {
+                Class.Employee = DatabaseContext.GetDB.Employee.Find(Class.EmployeeId);
+            }
+            ViewBag.UpdatedDate = DateTime.Now;
+            ViewBag.UpdatedBy = SessionManager.GetAccountCode(HttpContext);
+            ViewBag.CreatedBy = Class.Employee?.EmployeeCode;
+            return View(Class);
+        }
+
+        [HttpPost]
+        public IActionResult EditClass([FromBody] Class _class)
+        {
+            Class _Class = DatabaseContext.GetDB.Class.Find(_class.ClassId);
+            _Class.ClassName = _class.ClassName;
+            _Class.NumOfMem = _class.NumOfMem;
+            _Class.NumOfSeat=_class.NumOfSeat;
+            _Class.Grade=_class.Grade;
+            _Class.EmployeeId=_class.EmployeeId;
+            _Class.UpdatedDate = DateTime.Now;
+            _Class.UpdatedBy= SessionManager.GetId(HttpContext);
+           
+            DatabaseContext.GetDB.Class.Update(_Class);
+            DatabaseContext.GetDB.SaveChanges();
+            return Json(new
+            {
+                status = 200,
+                message = "Cập nhật thành công"
+            }); ;
+        }
+
+        [HttpPost]
+        public IActionResult loadStudentOfClass(Guid id, int pageCurrent = 1, int size = 10, int OrderBy = 0)
+        {
+            List<Student> students = DatabaseContext.GetDB.Student.Where(x => x.ClassId == id && x.Status == 1).ToList();
+            foreach(Student student in students)
+            {
+                student.StudentTask = DatabaseContext.GetDB.StudentTask.Find(student.StudentTaskId);
+            }
+            if(OrderBy== 0)
+            {
+                students.Sort(new StudentNameComparer());
+            }
+            if (OrderBy == 1)
+            {
+                students=students.OrderBy(x=>x.CodeOfSeat).ToList();
+            }
+            int pageSize = (int)Math.Ceiling((double)students.Count / size);
+            students = students.Skip((pageCurrent - 1) * size).Take(size).ToList();
+            return Json(new
+            {
+                students = students,
+                pageSize= pageSize,
+                pageCurrent = pageCurrent,
+                orderBy=OrderBy
+            });
         }
     }
 }

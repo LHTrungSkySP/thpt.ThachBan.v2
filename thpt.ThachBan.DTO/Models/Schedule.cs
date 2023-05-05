@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace thpt.ThachBan.DTO.Models
 {
@@ -12,7 +13,6 @@ namespace thpt.ThachBan.DTO.Models
         public int ClassTime { get; set; }
         public Guid? SubjectId { get; set; }
         public Guid? EmpoyeeId { get; set; }
-
         public virtual Class Class { get; set; }
         public virtual Employee Empoyee { get; set; }
         public virtual Subject Subject { get; set; }

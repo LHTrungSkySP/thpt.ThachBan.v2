@@ -20,12 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/ClassManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/ClassManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/ClassManager/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/HomeAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/ScheduleManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2NoZWR1bGVNYW5hZ2VyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/StudentManager/Create.cshtml]
@@ -38,6 +50,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/StudentManager/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudE1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/SubjectManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdE1hbmFnZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/SubjectManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdE1hbmFnZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Admin/Views/SubjectManager/Index.cshtml]

@@ -9,6 +9,6 @@ namespace thpt.ThachBan.DTO.ViewModels.Areas.Admin
     public class loadSubjectOfClassPost
     {
         public List<Guid> guids { get; set; }
-        public int grade { get; set; }
+        public Guid classId { get; set; }
     }
 }

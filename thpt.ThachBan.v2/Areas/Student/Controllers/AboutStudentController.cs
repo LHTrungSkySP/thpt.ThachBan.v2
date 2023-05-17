@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using thpt.ThachBan.BAL.StudentBAL;
 using thpt.ThachBan.DAL;
 using thpt.ThachBan.DTO.Models;
+using thpt.ThachBan.v2.Models.UnititiesModel;
 
 namespace thpt.ThachBan.v2.Controllers
 {
@@ -20,11 +21,8 @@ namespace thpt.ThachBan.v2.Controllers
         #endregion
         public IActionResult Index()
         {
-            dynamic data = JsonConvert.DeserializeObject(HttpContext.Session.GetString("UserInfor"));
-            string code= data.AccountCode;
-
-
-            return View(studentBAL.GetAboutStudent(code));
+            return View(studentBAL.GetAboutStudent(SessionManager.GetAccountCode(HttpContext)));
         }
+
     }
 }

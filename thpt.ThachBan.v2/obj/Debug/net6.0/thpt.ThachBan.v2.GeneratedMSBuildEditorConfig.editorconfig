@@ -80,8 +80,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBYm91dFN0dWRlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/GetResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxHZXRSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/GetResultByGrade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxHZXRSZXN1bHRCeUdyYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/InforClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxJbmZvckNsYXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/InforLeaderOfClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxJbmZvckxlYWRlck9mQ2xhc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/ViewSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxWaWV3U2NoZWR1bGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Teacher/Views/AboutTeacher/Index.cshtml]
@@ -90,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Areas/Teacher/Views/HomeTeacher/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xIb21lVGVhY2hlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Views/BaseArea/ChangePass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZUFyZWFcQ2hhbmdlUGFzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Le Trung/Desktop/New folder (2)/thpt.ThachBan.v2/thpt.ThachBan.v2/Views/Home/Privacy.cshtml]

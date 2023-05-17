@@ -34,24 +34,25 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             int OrderBy = 0,
             int pageCurrent = 1,
             int size = 10,
-            string? CodeSearch = null,
-            string? NameSearch = null,
-            string? ClassSearch = null,
-            string? StudentTaskSearch = null,
-            string? SocialPolicySearch = null,
+            string? CodeSearch = "",
+            string? NameSearch = "",
+            string? ClassSearch = "",
+            string? StudentTaskSearch = "",
+            string? SocialPolicySearch = "",
             int Status = 1,
             Guid? id = null
             )
         {
-            ViewBag.status = Status;
-            ViewBag.OrderBy = OrderBy;
-            ViewBag.PageCurrent = pageCurrent;
-            ViewBag.Size = size;
-            ViewBag.CodeSearch = CodeSearch;
-            ViewBag.NameSearch = NameSearch;
-            ViewBag.ClassSearch = ClassSearch;
-            ViewBag.TaskSearch = StudentTaskSearch;
-            ViewBag.PolicyName = SocialPolicySearch;
+            TempData["status"]= Status;
+            TempData["PageCurrent"]= pageCurrent;
+            TempData["Size"]= size;
+            TempData["CodeSearch"]= CodeSearch;
+            TempData["NameSearch"]= NameSearch;
+            TempData["OrderBy"]= OrderBy;
+            TempData["ClassSearch"]= ClassSearch;
+            TempData["TaskSearch"]= StudentTaskSearch;
+            TempData["PolicyName"]= SocialPolicySearch;
+
             if (id != null)
             {
                 Student student = DatabaseContext.GetDB.Student.Find(id);

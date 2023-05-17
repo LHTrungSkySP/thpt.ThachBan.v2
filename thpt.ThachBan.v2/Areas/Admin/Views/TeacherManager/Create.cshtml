@@ -354,6 +354,12 @@
                 PlaceOfBirth: $('#PlaceOfBirth').val(),
                 Nation: $('#Nation').val(),
                 Address: $('#Address').val(),
+                WorkStartedDate : $('#WorkStartedDate').val(),
+                WorkStartedMonth : $('#WorkStartedMonth').val(),
+                WorkStartedYear : $("#WorkStartedYear").val(),
+                WorkEndedDate: $('#WorkEndedDate').val(),
+                WorkEndedMonth: $('#WorkEndedMonth').val(),
+                WorkEndedYear: $("#WorkEndedYear").val(),
                 Email: $('#Email').val(),
                 PhoneNumber: $('#PhoneNumber').val(),
                 TypeAcc: typeAcc,
@@ -362,7 +368,6 @@
                 listDepartment: listDepartment
             };
             console.log(datapost);
-            var EmployeeId = $('#EmployeeId').val();
             const data = $.ajax({
                 url: '@Url.Action("CreatePost","TeacherManager")',
                 type: 'POST',

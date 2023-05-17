@@ -31,7 +31,7 @@
                             {0,"Mã học sinh"}, 
                             {1,"Mới nhất"}, 
                             {2,"Họ tên"} },
-                    "Key", "Value",@ViewBag.OrderBy),"--Sắp xếp--",
+                    "Key", "Value",@TempData["OrderBy"]),"--Sắp xếp--",
                     htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
                     <span>&nbsp;&nbsp;&nbsp;</span>
 
@@ -39,26 +39,26 @@
                         new Dictionary<int,string>(){ 
                             {0,"Nghỉ học"}, 
                             {1,"Đang học"}},
-                    "Key", "Value",@ViewBag.Status),"--Trạng thái--",
+                    "Key", "Value",@TempData["Status"]),"--Trạng thái--",
                     htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
                     <span>&nbsp;&nbsp;&nbsp;</span>
 
-                    <input name="CodeSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Mã" value="@ViewBag.CodeSearch">
+                    <input id="CodeSearch" name="CodeSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Mã" value="@TempData["CodeSearch"]">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
                     <span>&nbsp;&nbsp;&nbsp;</span>
 
-                    <input name="NameSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Họ tên" value="@ViewBag.NameSearch">
+                    <input id="NameSearch" name="NameSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Họ tên" value="@TempData["NameSearch"]">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
                     <span>&nbsp;&nbsp;&nbsp;</span>
-                    <input name="ClassSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Lớp" value="@ViewBag.ClassSearch">
-                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
-
-                    <span>&nbsp;&nbsp;&nbsp;</span>
-                    <input name="StudentTaskSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Chức vụ" value="@ViewBag.TaskSearch">
+                    <input id="ClassSearch" name="ClassSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Lớp" value="@TempData["ClassSearch"]">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
 
                     <span>&nbsp;&nbsp;&nbsp;</span>
-                    <input name="SocialPolicySearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Học bổng" value="@ViewBag.PolicyName">
+                    <input id="StudentTaskSearch" name="StudentTaskSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Chức vụ" value="@TempData["TaskSearch"]">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <input id="SocialPolicySearch" name="SocialPolicySearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Học bổng" value="@TempData["PolicyName"]">
                     <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
                 </div>
             </form>
@@ -158,8 +158,7 @@
     $(document).ready(function () {
         $('#changePaging').focus();
         $("#changePaging").on("change",function(){
-            window.location.href = "/Admin/StudentManager?pageCurrent=" + $("#changePaging").val();
-        });
+            window.location.href = "/Admin/StudentManager?pageCurrent="+$("#changePaging").val()+ "&OrderBy=" + $("#OrderBy").val()+ "&Status=" + $("#Status").val()  + "&CodeSearch=" + $("#CodeSearch").val() + "&NameSearch=" + $("#NameSearch").val() + "&ClassSearch=" + $("#ClassSearch").val() + "&StudentTaskSearch=" + $("#StudentTaskSearch").val() + "&SocialPolicySearch=" + $("#SocialPolicySearch").val();        });
         var btn_posts = $('.btn_post');
         for(let i=0;i<btn_posts.length;i++){
             $('#btn_post_'+i).on("click",function(){

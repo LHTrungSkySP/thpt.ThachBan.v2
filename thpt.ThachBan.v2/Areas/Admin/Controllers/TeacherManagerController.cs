@@ -50,19 +50,8 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             ViewBag.SubjectSearch = SubjectSearch;
             ViewBag.NumberPhoneSearch = NumberPhoneSearch;
             ViewBag.Status = Status;
-            List<AboutEmployeePage> aboutEmployees = employeeBAL.EmployeePaging(Status, CodeSearch, NameSearch, ClassSearch, SubjectSearch, NumberPhoneSearch);
-            if (OrderBy == 0)
-            {
-                aboutEmployees=aboutEmployees.OrderBy(x => x.Employee.EmployeeCode).ToList();
-            }
-            else if(OrderBy == 1)
-            {
-                aboutEmployees=aboutEmployees.OrderBy(x => x.Employee.CreatedDate).ToList();
-            }
-            else if(OrderBy == 2)
-            {
-                aboutEmployees=aboutEmployees.OrderBy(x => x.Employee.EmployeeName).ToList();
-            }
+
+            List<AboutEmployeePage> aboutEmployees = employeeBAL.EmployeePaging(OrderBy,Status, CodeSearch, NameSearch, ClassSearch, SubjectSearch, NumberPhoneSearch);
             ViewBag.pageSize = (int)Math.Ceiling((double)aboutEmployees.Count / size);
             aboutEmployees = aboutEmployees.Skip((pageCurrent - 1) * size).Take(size).ToList();
             ViewBag.pageCurrent = pageCurrent;
@@ -159,6 +148,8 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
                 employee.Gender = data.Gender;
                 employee.PlaceOfBirth = data.PlaceOfBirth;
                 employee.Nation = data.Nation;
+                employee.UpdatedDate = DateTime.Now;
+                employee.UpdatedBy = SessionManager.GetId(HttpContext);
                 try
                 {
                     employee.DateOfBirth = DateTime.Parse(data.DateOfBirthYear + "-" + data.DateOfBirthMonth + "-" + data.DateOfBirthDate);
@@ -200,11 +191,16 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
                 DatabaseContext.GetDB.Update(employee);
                 if (data.listClass.Count != 0)
                 {
-                    List<Class> classes = classBAL.GetClassByNameList(data.listClass);                    
+                    List<Class> classes = classBAL.GetClassByNameList(data.listClass);      
+                    List<Class> classesExits = DatabaseContext.GetDB.Class.Where(x=>x.EmployeeId== employee.EmployeeId).ToList();
+                    foreach (Class clazz in classesExits) {
+                        clazz.EmployeeId = null;
+                    }
                     foreach (Class c in classes)
                     {
                         c.EmployeeId = Guid.Parse(data.EmployeeId);
                     }
+                    DatabaseContext.GetDB.UpdateRange(classes);
                     DatabaseContext.GetDB.SaveChanges();
                 }
                 // những việc đc gaio lại
@@ -265,6 +261,7 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             employee.Address=teacherPost.Address;
             employee.Email=teacherPost.Email;
             employee.Status = 1;
+
             try
             {
                 DateTime date = DateTime.ParseExact(
@@ -315,7 +312,34 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
             }
             employee.CreatedBy = SessionManager.GetId(HttpContext);
             employee.CreatedDate = DateTime.Now;
-            return View(employee);
+            DatabaseContext.GetDB.Employee.Add(employee);
+            if (teacherPost.listClass.Count != 0)
+            {
+                List<Class> classes = classBAL.GetClassByNameList(teacherPost.listClass);
+                foreach (Class c in classes)
+                {
+                    c.EmployeeId = employee.EmployeeId;
+                }
+                DatabaseContext.GetDB.UpdateRange(classes);
+            }
+            // những việc đc gaio lại
+            if (teacherPost.listSubject.Count != 0)
+            {
+                List<Subject> newSubject = subjectBAL.GetSubjectByNameList(teacherPost.listSubject);
+                employee.Subject = newSubject;
+            }
+            if (teacherPost.listDepartment.Count != 0)
+            {
+                List<Department> departments = departmentBAL.GetDepartmentByNameList(teacherPost.listDepartment);
+
+                int taskUpdate = departmentManagerBAL.AddDepartmentMNGById(employee.EmployeeId, departments.Select(x => x.DepartmentId).ToList());
+            }
+            DatabaseContext.GetDB.SaveChanges();
+            return Json(new
+            {
+                status = 200,
+                message = "Tạo thành công",
+            });
         }
 
         public string GetTeacherCode()

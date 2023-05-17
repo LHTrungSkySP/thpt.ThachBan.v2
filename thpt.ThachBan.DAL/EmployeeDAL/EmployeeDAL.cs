@@ -43,7 +43,7 @@ namespace thpt.ThachBan.DAL.EmployeeDAL
         /// <param name="SubjectSearch">Môn học cần tìm</param>
         /// <param name="NumberPhoneSearch">Số điện thoại cần tìm</param>
         /// <returns>danh sách sau khi lọc qua các điều kiện</returns>
-        public List<AboutEmployeePage> EmployeePaging(string CodeSearch = null, string NameSearch = null, string ClassSearch = null, string SubjectSearch = null, string NumberPhoneSearch = null)
+        public List<AboutEmployeePage> EmployeePaging(int OrderBy, string CodeSearch = null, string NameSearch = null, string ClassSearch = null, string SubjectSearch = null, string NumberPhoneSearch = null)
         {
             List<AboutEmployeePage> aboutEmployees = new List<AboutEmployeePage>();
             foreach (var item in DatabaseContext.GetDB.Employee.ToList())
@@ -52,6 +52,18 @@ namespace thpt.ThachBan.DAL.EmployeeDAL
                 aboutEmployees.Add(aboutEmployee);
             }
             aboutEmployees = aboutEmployees.ToList();
+            if (OrderBy == 0)
+            {
+                aboutEmployees = aboutEmployees.OrderBy(x => x.Employee.EmployeeCode).ToList();
+            }
+            else if (OrderBy == 1)
+            {
+                aboutEmployees = aboutEmployees.OrderBy(x => x.Employee.CreatedDate).Reverse().ToList();
+            }
+            else if (OrderBy == 2)
+            {
+                aboutEmployees = aboutEmployees.OrderBy(x => x.Employee.EmployeeName).ToList();
+            }
             if (!String.IsNullOrEmpty(CodeSearch))
             {
                 aboutEmployees = aboutEmployees.Where(p => p.Employee.EmployeeCode.Contains(CodeSearch)).ToList();

@@ -46,7 +46,21 @@
             </div>
         </div>
     </li>
+        <!-- Nav Item - Thông tin admin -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#About"
+           aria-expanded="true" aria-controls="About">
 
+            <i class="icon-sidebar fas fa-user-graduate"></i>
+            <span>Thông tin admin</span>
+        </a>
+        <div id="About" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" asp-action="Index" asp-controller="AboutAdmin">Thông tin</a>
+                <a class="collapse-item" asp-area="" asp-action="ChangePass" asp-controller="BaseArea">Đổi mật khẩu</a>
+            </div>
+        </div>
+    </li>
         <!-- Nav Item - Quản lý giáo viên -->
     <li class="nav-item">
         <a asp-area="Admin" asp-controller="TeacherManager" asp-action="Index" class="nav-link">

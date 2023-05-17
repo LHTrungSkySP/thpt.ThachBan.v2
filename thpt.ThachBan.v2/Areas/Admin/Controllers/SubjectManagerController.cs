@@ -51,11 +51,11 @@ namespace thpt.ThachBan.v2.Areas.Admin.Controllers
         public IActionResult Edit(Guid id)
         {
             ViewBag.Departments = DatabaseContext.GetDB.Department.ToList();
-            Subject? subject = DatabaseContext.GetDB.Subject.Find(id);
-            if (subject != null)
-            {
-                subject.Department = DatabaseContext.GetDB.Department.Find(subject.DepartmentId);
-            }
+            ViewBag.UpdatedBy = "";
+
+            Subject subject = DatabaseContext.GetDB.Subject.Find(id);
+            ViewBag.CreatedBy = DatabaseContext.GetDB.Account.Find(subject.CreatedBy);
+            subject.Department = DatabaseContext.GetDB.Department.Find(subject.DepartmentId);
             return View(subject);
         }
 

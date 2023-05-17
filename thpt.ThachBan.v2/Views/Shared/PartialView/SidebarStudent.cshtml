@@ -25,34 +25,12 @@
 
     <!-- Nav Item - Thông báo -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Notification"
-           aria-expanded="true" aria-controls="Notification">
+        <a class="nav-link" href="#">
             <i class="icon-sidebar fas fa-bell"></i>
             <span>Thông báo</span>
         </a>
-        <div id="Notification" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Thông báo từ nhà trường</a>
-                <a class="collapse-item" href="cards.html">Thông báo cá nhân</a>
-            </div>
-        </div>
     </li>
 
-    <!-- Nav Item - Tiện ích -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Utilities"
-           aria-expanded="true" aria-controls="Utilities">
-            <i class="icon-sidebar fas fa-bookmark"></i>
-            <span>Tiện ích</span>
-        </a>
-        <div id="Utilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Xin đi học muộn</a>
-                <a class="collapse-item" href="cards.html">Xin nghỉ học</a>
-                <a class="collapse-item" href="cards.html">Hướng dẫn sử dụng</a>
-            </div>
-        </div>
-    </li>
 
     <!-- Nav Item - Thông tin học sinh -->
     <li class="nav-item">
@@ -64,28 +42,12 @@
         </a>
         <div id="About" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Thông tin</a>
-                <a class="collapse-item" href="cards.html">Đổi mật khẩu</a>
+                <a class="collapse-item" asp-action="Index" asp-controller="AboutStudent">Thông tin</a>
+                <a class="collapse-item" asp-area="" asp-action="ChangePass" asp-controller="BaseArea">Đổi mật khẩu</a>
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Theo dõi giao dịch -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Trade"
-           aria-expanded="true" aria-controls="Trade">
-
-            <i class="icon-sidebar fas fa-money-check-alt"></i>
-            <span>Giao dịch</span>
-        </a>
-        <div id="Trade" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Nạp tiền vào tài khoản</a>
-                <a class="collapse-item" href="cards.html">Thanh toán công nợ</a>
-                <a class="collapse-item" href="cards.html">Lịch sử giao dịch</a>
-            </div>
-        </div>
-    </li>
 
     <!-- Nav Item - Thời khóa biểu -->
     <li class="nav-item">
@@ -97,34 +59,34 @@
         </a>
         <div id="Schedule" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Thời khóa biểu</a>
-                <a class="collapse-item" href="cards.html">Lịch thi</a>
+                <a class="collapse-item" asp-area="Student" asp-action="ViewSchedule" asp-controller="HomeStudent">Thời khóa biểu</a>
+                @*<a class="collapse-item" href="cards.html">Lịch thi</a>*@
             </div>
         </div>
     </li>
 
-    <!-- Nav Item - Bài kiểm tra online -->
+    <!-- Nav Item - Thông tin GVCN-->
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a hasp-area="Student" asp-action="GetLeaderOfClass" asp-controller="HomeStudent" class="nav-link">
             <i class="icon-sidebar fas fa-diagnoses"></i>
-            <span>Kiểm tra online</span>
+            <span>Thông tin GVCN</span>
         </a>
     </li>
 
 
-    <!-- Nav Item - Chương trình đào tạo -->
+    <!-- Nav Item - Thông tin lớp học -->
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a asp-area="Student" asp-action="InforClass" asp-controller="HomeStudent" class="nav-link">
                 <i class="icon-sidebar fas fa-book"></i>
-            <span>Chương trình đào tạo</span>
+            <span>Thông tin lớp học</span>
         </a>
     </li>
 
-    <!-- Nav Item - Khảo sát -->
+    <!-- Nav Item - Xem điểm -->
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a asp-area="Student" asp-action="GetResult" asp-controller="HomeStudent" class="nav-link">
                 <i class="icon-sidebar far fa-file-alt"></i>
-            <span>Khảo sát</span>
+            <span>Xem kết quả học tập</span>
         </a>
     </li>
 </ul>

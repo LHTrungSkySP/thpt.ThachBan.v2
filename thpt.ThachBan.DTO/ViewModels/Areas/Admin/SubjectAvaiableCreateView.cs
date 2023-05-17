@@ -11,5 +11,8 @@ namespace thpt.ThachBan.DTO.ViewModels.Areas.Admin
     {
         public Subject subject { get; set; }
         public int inventory;
+        public Employee Employee { get; set; }
+        public List<int> x = new List<int>();
+        public List<int> y = new List<int>();
     }
 }

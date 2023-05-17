@@ -25,6 +25,6 @@ namespace thpt.ThachBan.BAL.EmployeeBAL
         /// <param name="SubjectSearch">Môn học cần tìm</param>
         /// <param name="NumberPhoneSearch">Số điện thoại cần tìm</param>
         /// <returns>danh sách sau khi lọc qua các điều kiện</returns>
-        public List<AboutEmployeePage> EmployeePaging(int Status,string CodeSearch = null, string NameSearch = null, string ClassSearch = null, string SubjectSearch = null, string NumberPhoneSearch = null);
+        public List<AboutEmployeePage> EmployeePaging(int Orderby,int Status,string CodeSearch = null, string NameSearch = null, string ClassSearch = null, string SubjectSearch = null, string NumberPhoneSearch = null);
     }
 }

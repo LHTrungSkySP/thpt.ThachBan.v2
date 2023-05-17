@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using thpt.ThachBan.DAL.AccountDAL;
 using thpt.ThachBan.DTO.Models;
 
 namespace thpt.ThachBan.BAL.AccountBAL
@@ -41,5 +42,6 @@ namespace thpt.ThachBan.BAL.AccountBAL
         /// Created by:  LHTRUNG 20/4/2023
         /// 
         public void UpdatePassword(string username, string code, string codeServer, string newPassword, string comfirmPassword);
+        
     }
 }

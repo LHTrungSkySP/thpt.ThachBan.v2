@@ -35,9 +35,9 @@ namespace thpt.ThachBan.BAL.EmployeeBAL
         /// <param name="SubjectSearch">Môn học cần tìm</param>
         /// <param name="NumberPhoneSearch">Số điện thoại cần tìm</param>
         /// <returns>danh sách sau khi lọc qua các điều kiện</returns>
-        public List<AboutEmployeePage> EmployeePaging(int Status,string CodeSearch = null, string NameSearch = null, string ClassSearch = null, string SubjectSearch = null, string NumberPhoneSearch = null)
+        public List<AboutEmployeePage> EmployeePaging(int OrderBy,int Status,string CodeSearch = null, string NameSearch = null, string ClassSearch = null, string SubjectSearch = null, string NumberPhoneSearch = null)
         {
-            return employeeDAL.EmployeePaging(CodeSearch, NameSearch, ClassSearch, SubjectSearch, NumberPhoneSearch).Where(x=>x.Employee.Status== Status).ToList();
+            return employeeDAL.EmployeePaging(OrderBy,CodeSearch, NameSearch, ClassSearch, SubjectSearch, NumberPhoneSearch).Where(x=>x.Employee.Status== Status).ToList();
         }
     }
 }
